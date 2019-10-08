@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/willgearty/pcmtools.svg?branch=master)](https://travis-ci.com/willgearty/pcmtools)
+[![DOI](https://zenodo.org/badge/213449197.svg)](https://zenodo.org/badge/latestdoi/213449197)
 
 # pcmtools
 Various tools to help with performing phylogenetic comparative methods and curating/visualizing the results.
