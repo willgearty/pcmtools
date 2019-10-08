@@ -39,3 +39,10 @@ ou.aic <- OUwieAICSumm(ou.parameters)
 #Model average parameters
 ou.avg <- OUwieModelAvg(ou.parameters)
 ```
+
+### Coming Soon...
+- Plotting phenotypes through time
+- Calculating phenotype statistics through time
+- Merging and splitting regimes in simmaps
+- Plotting OU models
+- And more!
