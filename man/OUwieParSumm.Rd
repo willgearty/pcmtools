@@ -31,6 +31,7 @@ It is assumed that the order of the models/\code{colnames} in \code{regime.mat} 
 Valid options for \code{params} are "Alpha", "Sigma.sq", "Theta", "Theta.se", "Halflife" (phylogenetic half-life), "Stat.var" (stationary variance), "AIC", "AICc", and "BIC".
 }
 \examples{
+\dontrun{
 library(OUwie)
 data(tworegime)
 ou.results <- list()
@@ -40,7 +41,7 @@ ou.results[[3]] <- OUwie(tree,trait,model=c("OUM"))
 ou.results[[4]] <- OUwie(tree,trait,model=c("OUMV"))
 
 #Both regimes have same parameters for BM1 model. Both regimes have different parameters for other models.
-regime.mat <- data.frame(BM1 = c(1, 1), BMS = c(1,2), OUM = c(1,2), OUMV = c(1,2), row.names = c(1,2))
+regime.mat <- data.frame(BM1 = c(1, 1), BMS = c(1,2), OUM = c(1,2), OUMV = c(1,2), row.names = c(1,2))}
 
 OUwieParSumm(ou.results, regime.mat)
 }

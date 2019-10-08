@@ -64,6 +64,7 @@ deltaAIC <- function(AIC, na.rm = TRUE){
 #' @return An \code{ouwiepars} object. Basically a 4-D array that can be passed to other functions for further analysis/visualization.
 #' @export
 #' @examples
+#' \dontrun{
 #' library(OUwie)
 #' data(tworegime)
 #' ou.results <- list()
@@ -73,7 +74,7 @@ deltaAIC <- function(AIC, na.rm = TRUE){
 #' ou.results[[4]] <- OUwie(tree,trait,model=c("OUMV"))
 #'
 #' #Both regimes have same parameters for BM1 model. Both regimes have different parameters for other models.
-#' regime.mat <- data.frame(BM1 = c(1, 1), BMS = c(1,2), OUM = c(1,2), OUMV = c(1,2), row.names = c(1,2))
+#' regime.mat <- data.frame(BM1 = c(1, 1), BMS = c(1,2), OUM = c(1,2), OUMV = c(1,2), row.names = c(1,2))}
 #'
 #' OUwieParSumm(ou.results, regime.mat)
 OUwieParSumm <- function(ou.results, regime.mat, params = c("Alpha","Sigma.sq","Theta","Theta.se", "AICc")){
