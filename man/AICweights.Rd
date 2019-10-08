@@ -18,7 +18,7 @@ A named vector of weights with names inherited from \code{AIC}.
 This function takes a vector of AIC (Akaike Information Criterion) values and returns a vector of AIC weights using the formula from Burnham and Anderson (2002).
 }
 \details{
-If \code{remove.na = FALSE} and any values in \code{AIC} are \code{NA}, all returned values will be \code{NA}.
+If \code{na.rm = FALSE} and any values in \code{AIC} are \code{NA}, all returned values will be \code{NA}.
 }
 \examples{
 AIC <- c(NA, 5, 10, 20, 25)

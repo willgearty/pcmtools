@@ -18,7 +18,7 @@ A vector of weights.
 Calculate deltaAIC (Akaike Information Criterion), the absolute difference between the lowest AIC value and the other AIC values.
 }
 \details{
-If \code{remove.na = FALSE} and any values in \code{AIC} are \code{NA}, all returned values will be \code{NA}.
+If \code{na.rm = FALSE} and any values in \code{AIC} are \code{NA}, all returned values will be \code{NA}.
 }
 \examples{
 AIC <- c(NA, 5, 10, 20, 25)
