@@ -4,3 +4,11 @@ language: R
 warnings_are_errors: false
 sudo: false
 cache: packages
+
+addons:
+  apt:
+    update: true
+    sources:
+      - sourceline: 'ppa:cran/imagemagick'
+    packages:
+      - libmagick++-dev
