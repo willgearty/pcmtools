@@ -7,5 +7,5 @@ Depends: R (>= 3.4)
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
-Imports: zoo, phytools
+Imports: zoo, phytools, ape
 RoxygenNote: 6.1.1
