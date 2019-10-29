@@ -40,6 +40,26 @@ ou.aic <- OUwieAICSumm(ou.parameters)
 ou.avg <- OUwieModelAvg(ou.parameters)
 ```
 
+###Rename, merge, or split mapped states
+```r
+library(phytools)
+#Simulate a mapped tree
+set.seed(4)
+Q <- matrix(c(-2,1,1,1,-2,1,1,1,-2),3,3)
+rownames(Q) <- colnames(Q) <- letters[1:3]
+tree <- sim.history(pbtree(n=100,scale=1),Q)
+cols <- setNames(c("blue","red","green","orange"),letters[1:4])
+
+#Plot the mapping
+plot(tree, cols, ftype="i", fsize=0.7)
+
+#Split state c to state d within subclade
+tree2 <- mergeMappedStates2(tree, "c", "d", 173)
+
+#Plot new mapping
+plot(tree2, cols, ftype="i", fsize=0.7)
+```
+
 ### Extract posterior values from densityMaps and contMaps
 ```r
 library(phytools)
