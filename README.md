@@ -88,8 +88,35 @@ pp_data <- extractSimmapDensity(map1, map2)
 plot(pp_data$map1, pp_data$map2)
 ```
 
+### Calculating phenotype statistics through time
+```r
+library(phytools)
+#Simulate tree
+tree <- pbtree(n=70,scale=1)
+
+#Simulate discrete trait
+Q <- matrix(c(-1,1,1,-1),2,2)
+rownames(Q) <- colnames(Q)<-c(0,1)
+tree <- sim.history(tree,Q)
+
+#Simulate continuous trait
+x2 <- fastBM(tree,sig2=0.1)
+
+#Calculate stats through time
+tstt <- traitStatsThroughTime(tree, x2)
+coords <- tstt$xy
+stats <- tstt$stats
+
+#Plot phenogram
+ys <- c(coords$y1, coords$y2)
+plot(NULL, xlim=c(0,1), ylim=c(min(ys), max(ys)), ylab="trait", xlab="time")
+segments(coords$x1, coords$y1, coords$x2, coords$y2)
+
+#Plot stats
+plot(stats$x, stats$mean)
+```
+
 ### Coming Soon...
 - Plotting phenotypes through time
-- Calculating phenotype statistics through time
 - Plotting OU models
 - And more!
