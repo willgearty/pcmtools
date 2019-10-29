@@ -40,7 +40,7 @@ ou.aic <- OUwieAICSumm(ou.parameters)
 ou.avg <- OUwieModelAvg(ou.parameters)
 ```
 
-###Rename, merge, or split mapped states
+### Rename, merge, or split mapped states
 ```r
 library(phytools)
 #Simulate a mapped tree
