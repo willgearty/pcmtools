@@ -40,6 +40,34 @@ ou.aic <- OUwieAICSumm(ou.parameters)
 ou.avg <- OUwieModelAvg(ou.parameters)
 ```
 
+### Extract posterior values from densityMaps and contMaps
+```r
+library(phytools)
+#Simulate tree
+tree <- pbtree(n=70,scale=1)
+
+#Simulate discrete trait
+Q <- matrix(c(-1,1,1,-1),2,2)
+rownames(Q) <- colnames(Q)<-c(0,1)
+x1 <- sim.history(tree,Q)$states
+
+#Generate stochastic maps and density map
+mtrees <- make.simmap(tree,x1,nsim=100)
+map1 <- densityMap(mtrees)
+
+#Simulate continuous trait
+x2 <- fastBM(tree,sig2=0.1)
+
+#Generate cont map
+map2 <- contMap(tree, x2)
+
+#Extract posterior densities
+pp_data <- extractSimmapDensity(map1, map2)
+
+#Plot to see how traits have evolved with respect to one another
+plot(pp_data$map1, pp_data$map2)
+```
+
 ### Coming Soon...
 - Plotting phenotypes through time
 - Calculating phenotype statistics through time
