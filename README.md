@@ -91,6 +91,5 @@ plot(pp_data$map1, pp_data$map2)
 ### Coming Soon...
 - Plotting phenotypes through time
 - Calculating phenotype statistics through time
-- Merging and splitting regimes in simmaps
 - Plotting OU models
 - And more!
